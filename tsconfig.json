@@ -13,7 +13,16 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "baseUrl": ".",
+    "paths":{
+      "@/components/*": ["components/*"],
+      "@/lib/*": ["lib/*"],
+      "@/api/*": ["pages/api/*"],
+      "@/hooks/*": ["hooks/*"],
+      "@/images/*": ["public/images/*"],
+    // paths - 配置@components快捷路徑，否則组件中引入tsx组件會找不到模組
+    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
